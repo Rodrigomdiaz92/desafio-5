@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../partials/head'); %>
+</head>
+<body>
+    <header>
+        <%- include('../partials/header'); %>
+    </header>
+    <main>
+        <div class="container jumbotron">
+            <h2>Ingrese Producto</h2>
+            <p>
+                <%= tagline %>
+            </p>
+            <ul>
+                <% pets.forEach((pet) => { %>
+                    <li>
+                        <strong>
+                            <%= pet.nombre %>
+                        </strong> representa a <%= pet.organizacion %> , nacio el <%= pet.ano %>
+                    </li>
+                <% }); %>
+            </ul>
+        </div>
+    </main>
+    <footer>
+        <%- include('../partials/footer'); %>
+    </footer>
+    
+</body>
+</html>
